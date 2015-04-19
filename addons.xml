@@ -15,7 +15,23 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.ivysilani" name="iVysílání — Česká televize" version="1.2.6" provider-name="Štěpán Ort">
+<addon id="plugin.video.ivysilani" name="iVysílání — Česká televize" version="1.2.7" provider-name="Štěpán Ort">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="repository.kodi-czsk" version="1.0.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>iVysílání — Česká televize</summary>
+	<description>Deprecated addon. New version will be installed from Kodi CZ/SK repository.</description>
+    <description lang="cs">Zastaralý doplněk. Nová verze bude nainstalována z repozitáře Kodi CZ/SK.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.o2tvgo" name="O2TV Go" version="1.0.1" provider-name="Štěpán Ort">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -23,10 +39,33 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>iVysílání — Česká televize</summary>
-	<description>Plugin to play videos and live TV from Czech Television's iVysilani</description>
-    <description lang="cs">Plugin nabízí přístup do archivu České televize iVysílání i přehrávání kanálů živě.</description>
+    <summary>O2TV Go</summary>
+	<description>Plugin to play live channels from O2TV Go service</description>
+    <description lang="cs">Plugin na přehrávání živé televize ze služby O2TV GO</description>
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.kodi-czsk"
+  version="1.0.2"
+  name="Kodi CZ &amp; SK Doplňky"
+  provider-name="Kodi CZSK">
+  <extension point="xbmc.addon.repository"
+    name="repozitář českých a slovenských doplňků">
+    <info compressed="false">http://kodi-czsk.github.io/repository/repo/addons.xml</info>
+    <checksum>http://kodi-czsk.github.io/repository/repo/addons.xml.md5</checksum>
+    <datadir zip="true">http://kodi-czsk.github.io/repository/repo/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Kodi CZ &amp; SK Doplňky</summary>
+    <description>
+      This repository contains mostly video addons for czech users. [CR] Please send feedback, patches or fire any issues on http://xbmc-doplnky.googlecode.com
+    </description>
+    <description lang="cs">
+      Tento repozitář obsahuje video doplňky pro česky a slovensky mluvící uživatele.[CR] Máte-li jakékoliv poznámky, náměty, doplňky k začlenění nebo chcete nahlásit chybu, navštivte http://xbmc-doplnky.googlecode.com.
+    </description>
+    <platform>all</platform>
+    <language>cs sk</language>
   </extension>
 </addon>
 
@@ -49,20 +88,5 @@
         <license>MIT</license>
         <platform>all</platform>
     </extension>
-</addon>
-
-<addon id="plugin.video.o2tvgo" name="O2TV Go" version="1.0.1" provider-name="Štěpán Ort">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>O2TV Go</summary>
-	<description>Plugin to play live channels from O2TV Go service</description>
-    <description lang="cs">Plugin na přehrávání živé televize ze služby O2TV GO</description>
-    <platform>all</platform>
-  </extension>
 </addon>
 </addons>
